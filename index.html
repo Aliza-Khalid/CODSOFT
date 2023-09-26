@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7ad4444ffb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div id="header">
+        <div class="Hcontainer">
+            <nav>
+                <img src="images/bestlogo.jpg" class="logo" >
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#myservices">SERVICES</a></li>
+                    <li><a href="#Work">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="headertxt">
+                <h1>Hi,<br>This is Aliza Khalid.</h1>
+                <div class="wrapper">
+                    <div class="stxt"><b>I'm a</b></div>
+                <div>
+                    <ul class="dtxt">
+                        <li><span><b><i>Student.</i></b></span></li>
+                        <li><span><b><i>Developer.</i></b></span></li>
+                        <li><span><b><i>Designer.</i></b></span></li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br><br>
+
+    <!-- ABOUT SECTION -->
+    <img src="images/aboutimg.jpg" class="rimg"><br>
+    <div id="about">
+        <div class="Acontainer">
+
+            <div class="row">
+
+                <div class="abtcol2">
+                    <h1 class="title">About Me</h1>
+
+                    <p class="intro">I am an aspiring software engineering student at NED University, 
+                        deeply passionate about technology and driven to make a significant impact 
+                        in the field. I possess a versatile skill set, with expertise in programming languages 
+                        like Python, C++, HTML, CSS, Js along with proficiency in PowerBI for data analysis and visualization. 
+                        Beyond my academic pursuits, I engage in graphic designing as a creative and beneficial hobby. 
+                        I'm a dedicated problem solver, a quick learner, and I'm enthusiastic about exploring various opportunities 
+                        in software engineering as I continue to expand my knowledge and expertise in the tech industry.
+                        
+                        </p>
+
+                        <div class="tabT">
+                            <p class="Tab t1" onclick="opentab('education')">EDUCATION</p>
+                            <p class="Tab" onclick="opentab('hobby')">HOBBIES</p>
+                            
+                        </div>
+
+                        <div class="tabCon tC1" id="education">
+                            <ul>
+                                <li><span><b>2022-present</b> <br> Undergraduate Software Student</span><br> NED University of Engineering & Technology.</li><br>
+                                <li><span><b>2020-2022 </b><br> Intermediate with 94% </span><br>BAMM PECHS Govt. College for Women Karachi.</li><br>
+                                <li><span><b>2018-2020 </b><br> Matriculation with 86% </span><br> Arqam Public School</li><br>
+                            </ul>
+                        </div>
+
+                        <div class="tabCon" id="hobby">
+                            <ul>
+                                <li><span><b>Photography</b></span><br> Capturing moments and memories &<br>Exploring different photography styles.</li><br>
+                                <li><span><b>Video Editing</b></span><br> Enhancing videos with effects, voiceovers, and sound
+                                   &<br>Creating animated videos and engaging reels.</li><br>
+                                <li><span><b>Graphic Designing</b></span><br> Creating visual content for various purposes& <br>
+                                    Working with design software like Adobe Photoshop, Illustrator, or Canva.</li><br>
+                            </ul>
+                        </div>
+                </div>
+
+                <div class="abtcol1">
+                    <img src="images/aboutimg.jpg">
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("Tab");
+        var tabcontents = document.getElementsByClassName("tabCon");
+
+        function opentab(tabname){
+            for(tab of tablinks){
+                tab.classList.remove("t1");
+            }
+            for(tabC of tabcontents){
+                tabC.classList.remove("tC1");
+            }
+            event.currentTarget.classList.add("t1");
+            document.getElementById(tabname).classList.add("tC1");
+        }
+    </script>
+    
+    <!-- ---------skills--------- -->
+    <h1 class="title skil">My Skills</h1>
+    <div id="skills">
+        <div class="K1container">
+            <h2 class="heading1">Technical Skills</h2>
+            <div class="tch-bars">
+                <div class="bar"> <i class='bx bxl-html5'></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progressLine html">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxl-css3'></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progressLine css">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxl-javascript'></i>
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progressLine js">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxl-python'></i>
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progressLine py">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxl-c-plus-plus'></i>
+                    <div class="info">
+                        <span>OOP in C++</span>
+                    </div>
+                    <div class="progressLine cpp">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxs-bar-chart-square'></i>
+                    <div class="info">
+                        <span>Power-BI</span>
+                    </div>
+                    <div class="progressLine pb">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="K2container">
+            <h2 class="heading1">Professional Skills</h2>
+            <div class="prfsnal-bars"> 
+                <div class="prof-bars">
+                    <svg x="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">Flexible Creativity</div>
+                </div>
+                
+
+            <div class="prof-bars">
+                <svg x="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="text">Communication</div>
+            </div>
+
+            <div class="prof-bars">
+                <svg x="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">70%</div>
+                <div class="text">Problem-Solving</div>
+            </div>
+
+            <div class="prof-bars">
+                <svg x="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Adaptability</div>
+            </div>
+
+            <div class="prof-bars">
+                <svg x="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-5" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Collective Effort</div>
+            </div>
+
+            <div class="prof-bars">
+                <svg x="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-6" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Time Management</div>
+            </div>
+            </div>
+
+                
+
+        </div>
+    </div><br><br><br>
+
+
+    <!-- ----------------SERVICES---------------- -->
+    <div id="services">
+        <div class="Scontainer" id="myservices">
+            <h1 class="title">My Services</h1>
+            <div class="servicesList">
+                <div>
+                    <i class="fa-solid fa-code "></i>
+                    <h2>Web Design</h2>
+                    <p>I provide comprehensive web design services, crafting visually appealing and user-friendly websites that are responsive across all devices.</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python "></i>
+                    <h2>Development</h2>
+                    <p>
+                     As a Python and C++ developer, I specialize in leveraging Object-Oriented Programming (OOP) concepts to create efficient and maintainable software solutions.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-line "></i>
+                    <h2>Data Visualization</h2>
+                    <p>Through my expertise in Power BI, I specialize in crafting dynamic and visually engaging dashboards that effectively convey data insights.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------MY WORK----- -->
+    <div id="Work">
+        <div class="Wcontainer">
+            <h1 class="title">Project Work</h1>
+            <div class="workList">
+                <div class="work">
+                    <img src="images/quizbuzz.png" class="work1">
+                    <div class="layer">
+                        <h3>QuizzBuzz Application</h3>
+                        <p>A quiz application that offers a diverse range of quizzes, covering general knowledge questions,
+                            IQ challenges, and riddles. 
+                            This application is constructed using Python Tkinter for a 
+                            user-friendly interface, making it suitable for both 
+                            entertainment and educational purposes.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/hms.png"  class="work2">
+                    <div class="layer">
+                    <h3>Hotel Management System</h3>
+                    <p>Designed a C++ console-based hotel management system 
+                        rooted in Object-Oriented Programming (OOP) principles. It offers comprehensive 
+                        customer record management, seamless customer information input and retrieval, and 
+                        efficient room reservation and allocation.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>                       
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg" class="work3">
+                    <div class="layer">
+                        <h3>Web Design Projects</h3>
+                        <p>Built multiple projects to 
+                            enhance my proficiency in frontend development, demonstrating my dedication to 
+                            creating engaging user interfaces and experiences.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------CONTACT-------- -->
+     <div id="contact">
+        <div class="Ccontiner">
+            <div class="row">
+                <div class="contactLeft">
+                    <h1 class="title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> alizakhalidak8@gmail.com</p>
+                    <div class="social">
+                        <a href="#" class="lnk"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="twt"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#" class="fb"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <a href="images/CV.pdf" class="btn">Download Resume</a>
+                </div>
+                <div class="contactRight">
+                    <form >
+                        <input type="text" name="name " placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email">
+                        <textarea name="msg" rows="6" placeholder="Your Message"></textarea>
+                        <a href="" class="abtn"><button type="submit" class="btn2">Submit</button></a> 
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="upward">
+            <a href="#header">
+                <i class='bx bxs-up-arrow-square'></i>
+            </a>
+        </div>
+
+
+        <div class="copyryt">
+            <p> &copy; 2023 <span>Portfolio</span> by Aliza Khalid. <br>All right Reserved.</p>
+        </div>
+     </div>
+
+
+    <!-- --------menu------- -->
+    <script>
+      var side = document.getElementById("sidemenu");
+
+      function openmenu(){
+        side.style.right = "0";
+      }
+      function closemenu(){
+        side.style.right = "-300px";
+      }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+    
+    
+</body>
+</html>
